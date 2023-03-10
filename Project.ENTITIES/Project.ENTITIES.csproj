@@ -45,6 +45,13 @@
     <Compile Include="Models\AppUser.cs" />
     <Compile Include="Models\AppUserProfile.cs" />
     <Compile Include="Models\BaseEntity.cs" />
+    <Compile Include="Models\Booking.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\RoomBooking.cs" />
+    <Compile Include="Models\HouseKeeping.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\RoomType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
