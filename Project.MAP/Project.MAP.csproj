@@ -51,14 +51,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Options\AppUserMap.cs" />
+    <Compile Include="Options\AppUserProfileMap.cs" />
+    <Compile Include="Options\BaseMap.cs" />
+    <Compile Include="Options\BookingMap.cs" />
+    <Compile Include="Options\CustomerMap.cs" />
+    <Compile Include="Options\HouseKeepingMap.cs" />
+    <Compile Include="Options\OrderMap.cs" />
+    <Compile Include="Options\RoomBookingMap.cs" />
+    <Compile Include="Options\RoomMap.cs" />
+    <Compile Include="Options\RoomTypeMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Options\" />
+    <ProjectReference Include="..\Project.ENTITIES\Project.ENTITIES.csproj">
+      <Project>{9a44ffcc-dee7-4088-8a6b-d266b53a31c2}</Project>
+      <Name>Project.ENTITIES</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
