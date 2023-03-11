@@ -103,7 +103,7 @@ namespace Project.BLL.GenericRepository.BaseRep
 
         public List<T> GetModifieds()
         {
-            return Where(x => x.Status == ENTITIES.Enums.DataStatus.Updated);
+            return Where(x => x.Status == ENTITIES.Enums.DataStatus.Modified);
         }
 
         public List<T> GetPassives()
@@ -118,7 +118,7 @@ namespace Project.BLL.GenericRepository.BaseRep
 
         public void Update(T item)
         {
-            item.Status = ENTITIES.Enums.DataStatus.Updated;
+            item.Status = ENTITIES.Enums.DataStatus.Modified;
             item.DeletedDate = DateTime.Now;
             T toBeUpdated = Find(item.ID);
             _db.Entry(toBeUpdated).CurrentValues.SetValues(item);
