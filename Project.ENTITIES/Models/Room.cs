@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Project.ENTITIES.Models
 {
-    public class Room:BaseEntity
+    public class Room : BaseEntity
     {
         public string RoomNumber { get; set; }
         public string Description { get; set; }
@@ -18,7 +14,7 @@ namespace Project.ENTITIES.Models
 
         //Relational Properties
 
-        public RoomType  RoomType { get; set; }
+        public RoomType RoomType { get; set; }
         public HouseKeeping HouseKeeping { get; set; }
         public List<RoomBooking> RoomBookings { get; set; }
 
