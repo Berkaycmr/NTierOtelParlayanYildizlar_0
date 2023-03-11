@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data.Entity;
-using System.Linq;
-using System.Runtime.Remoting.Lifetime;
-using System.Text;
-using System.Threading.Tasks;
-using Project.ENTITIES.Models;
+﻿using Project.ENTITIES.Models;
 using Project.MAP.Options;
+using System.Data.Entity;
 
 
 namespace Project.DAL.ContextClasses
@@ -16,7 +9,7 @@ namespace Project.DAL.ContextClasses
 
     //ÖNEMLİ: Bu katmanda, UI katmanından referans aldığınız takdirde büyük bir güvenlik risk'i ile karşı karşıya kalabilirsiniz! 
 
-    internal class MyContext : DbContext
+    public class MyContext : DbContext
     {//MyContext'e DbContext'den miras vererek, ona bir veritabanı sınıfı olduğunu bildirmiş oluyoruz.
         public MyContext() : base("MyConnection")
         { //*BAŞLANGIÇ* projesinin AppConfig eylemleri içerisinden veritabanı özelliklerimizi alıp gerçekleştirecek olan Constructor'dır.
@@ -25,20 +18,20 @@ namespace Project.DAL.ContextClasses
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-         //Map katmanından veritabanı ayarlamalarımızı alıyoruz. (Aşağıdaki işlemleri yapabilmeniz için Map ve Entities katmanlarının referansı Dal katmanında da olmalıdır.)
+            //Map katmanından veritabanı ayarlamalarımızı alıyoruz. (Aşağıdaki işlemleri yapabilmeniz için Map ve Entities katmanlarının referansı Dal katmanında da olmalıdır.)
 
-         //Bu işlemleri gerçekleştirebilmek için Map ve Entities katmanlarının işlemlerinin bitmiş olması gerekmektedir.
+            //Bu işlemleri gerçekleştirebilmek için Map ve Entities katmanlarının işlemlerinin bitmiş olması gerekmektedir.
             modelBuilder.Configurations.Add(new AppUserMap());
-                modelBuilder.Configurations.Add(new AppUserProfileMap());
-                modelBuilder.Configurations.Add(new CustomerMap());
-                modelBuilder.Configurations.Add(new BookingMap());
-                modelBuilder.Configurations.Add(new CustomerMap());
-                modelBuilder.Configurations.Add(new HouseKeepingMap());
-                modelBuilder.Configurations.Add(new OrderMap());
-                modelBuilder.Configurations.Add(new RoomBookingMap());
-                modelBuilder.Configurations.Add(new RoomMap());
-                modelBuilder.Configurations.Add(new RoomTypeMap());
-           
+            modelBuilder.Configurations.Add(new AppUserProfileMap());
+            modelBuilder.Configurations.Add(new CustomerMap());
+            modelBuilder.Configurations.Add(new BookingMap());
+            modelBuilder.Configurations.Add(new CustomerMap());
+            modelBuilder.Configurations.Add(new HouseKeepingMap());
+            modelBuilder.Configurations.Add(new OrderMap());
+            modelBuilder.Configurations.Add(new RoomBookingMap());
+            modelBuilder.Configurations.Add(new RoomMap());
+            modelBuilder.Configurations.Add(new RoomTypeMap());
+
         }
         //Tablo olabilmeleri için DbSetlerimizi tanımlıyoruz.
         public DbSet<AppUser> AppUsers { get; set; }
@@ -50,7 +43,7 @@ namespace Project.DAL.ContextClasses
         public DbSet<Room> Rooms { get; set; }
         public DbSet<RoomBooking> RoomBookings { get; set; }
         public DbSet<RoomType> RoomTypes { get; set; }
-        
+
     }
     //Sıradaki işlem migration işlemi olacaktır ve DAL katmanı ile olan işlemlerimiz sonlanacaktır.
 }

@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Project.ENTITIES.Models
 {
-   public class Booking:BaseEntity
+    public class Booking : BaseEntity
     {
         public byte Person_Count { get; set; }
         public DateTime Check_In { get; set; }
