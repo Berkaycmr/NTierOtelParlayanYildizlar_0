@@ -25,7 +25,6 @@ namespace Project.DAL.ContextClasses
             modelBuilder.Configurations.Add(new AppUserProfileMap());
             modelBuilder.Configurations.Add(new CustomerMap());
             modelBuilder.Configurations.Add(new BookingMap());
-            modelBuilder.Configurations.Add(new CustomerMap());
             modelBuilder.Configurations.Add(new HouseKeepingMap());
             modelBuilder.Configurations.Add(new OrderMap());
             modelBuilder.Configurations.Add(new RoomBookingMap());
