@@ -22,6 +22,9 @@ namespace Project.WinUI
         {
             if (true)
             {
+                Loading loading = new Loading();
+                loading.Show();
+                this.Hide();
 
             }
             else
