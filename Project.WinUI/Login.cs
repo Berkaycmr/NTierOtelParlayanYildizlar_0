@@ -27,8 +27,8 @@ namespace Project.WinUI
             {
 
 
-                Loading loading = new Loading();
-                loading.Show();
+                main main = new main();
+                main.Show();
                 this.Hide();
 
             }
