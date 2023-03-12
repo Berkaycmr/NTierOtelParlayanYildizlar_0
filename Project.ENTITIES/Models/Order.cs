@@ -5,9 +5,14 @@
         public string Description { get; set; }
         public decimal OrderPrice { get; set; }
         public string RoomNo { get; set; }
-        public int BookingID { get; set; }
+        public int? BookingID { get; set; }
+
+        public override string ToString()
+        {
+            return $"Ürün : {Description} - Fiyatı : {OrderPrice:C2}";
+        }
 
         //Relational Properties
-        public Booking Booking { get; set; }
+        public virtual Booking Booking { get; set; }
     }
 }

@@ -5,19 +5,23 @@ namespace Project.ENTITIES.Models
 {
     public class Booking : BaseEntity
     {
-        public byte Person_Count { get; set; }
-        public DateTime Check_In { get; set; }
-        public DateTime Check_Out { get; set; }
-        public decimal Price { get; set; }
+        public byte PersonCount { get; set; }
+        public DateTime CheckIn { get; set; }
+        public DateTime CheckOut { get; set; }
+        public decimal? Price { get; set; }
         public int CustomerID { get; set; }
-        public int AppUserID { get; set; }
+        public int? AppUserID { get; set; }
 
+        public override string ToString()
+        {
+            return $"Kişi Sayısı : {PersonCount} Müşteri ID : {CustomerID} Giriş Tarihi : {CheckIn} Çıkış Tarihi : {CheckOut}";
+        }
 
         //Relational Properties
-        public Customer Customer { get; set; }
-        public AppUser AppUser { get; set; }
-        public List<Order> Orders { get; set; }
-        public List<RoomBooking> RoomBookings { get; set; }
+        public virtual Customer Customer { get; set; }
+        public virtual AppUser AppUser { get; set; }
+        public virtual List<Order> Orders { get; set; }
+        public virtual List<RoomBooking> RoomBookings { get; set; }
 
     }
 }

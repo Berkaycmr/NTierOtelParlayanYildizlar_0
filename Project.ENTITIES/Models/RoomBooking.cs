@@ -1,4 +1,7 @@
-﻿namespace Project.ENTITIES.Models
+﻿using System;
+using System.Collections.Generic;
+
+namespace Project.ENTITIES.Models
 {
     public class RoomBooking : BaseEntity
     {
@@ -6,7 +9,7 @@
         public int BookingID { get; set; }
 
         //Relational Properties
-        public Room Room { get; set; }
-        public Booking Booking { get; set; }
+        public virtual Room Room { get; set; }
+        public virtual Booking Booking { get; set; }
     }
 }

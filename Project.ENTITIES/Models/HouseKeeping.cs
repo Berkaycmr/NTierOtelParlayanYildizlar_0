@@ -8,7 +8,7 @@ namespace Project.ENTITIES.Models
         public string LastName { get; set; }
 
         //Relational Properties
-        public List<Room> Rooms { get; set; }
+        public virtual List<Room> Rooms { get; set; }
 
     }
 }

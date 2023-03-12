@@ -11,8 +11,13 @@ namespace Project.ENTITIES.Models
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
 
+        public override string ToString()
+        {
+            return $"Adı : {FirstName} Soyadı : {LastName} Telefonu : {PhoneNumber}";
+        }
+
         //Relational Properties
 
-        public List<Booking> Bookings { get; set; }
+        public virtual List<Booking> Bookings { get; set; }
     }
 }

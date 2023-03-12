@@ -8,7 +8,7 @@
 
         //Relational Properties
 
-        public AppUser AppUser { get; set; }
+        public virtual AppUser AppUser { get; set; }
 
 
 

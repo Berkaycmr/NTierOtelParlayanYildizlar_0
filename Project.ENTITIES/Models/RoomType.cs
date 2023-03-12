@@ -8,6 +8,6 @@ namespace Project.ENTITIES.Models
         public string Description { get; set; }
 
         //Relational Properties
-        public List<Room> Rooms { get; set; }
+        public virtual List<Room> Rooms { get; set; }
     }
 }
