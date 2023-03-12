@@ -31,41 +31,45 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pnlMenu = new System.Windows.Forms.Panel();
+            this.lblMenu = new System.Windows.Forms.Label();
             this.btnMenu = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pnlHome = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.pnlReservation = new System.Windows.Forms.Panel();
+            this.btnReservation = new System.Windows.Forms.Button();
+            this.pnlCustomer = new System.Windows.Forms.Panel();
+            this.btnCustomer = new System.Windows.Forms.Button();
+            this.pnlAbout = new System.Windows.Forms.Panel();
+            this.btnAbout = new System.Windows.Forms.Button();
+            this.pnlExit = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.tmrSidebar = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.aboutPage = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.sidebar.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlHome.SuspendLayout();
+            this.pnlReservation.SuspendLayout();
+            this.pnlCustomer.SuspendLayout();
+            this.pnlAbout.SuspendLayout();
+            this.pnlExit.SuspendLayout();
+            this.aboutPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
             // 
             this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.sidebar.Controls.Add(this.panel1);
-            this.sidebar.Controls.Add(this.panel2);
-            this.sidebar.Controls.Add(this.panel3);
-            this.sidebar.Controls.Add(this.panel4);
-            this.sidebar.Controls.Add(this.panel5);
+            this.sidebar.Controls.Add(this.pnlMenu);
+            this.sidebar.Controls.Add(this.pnlHome);
+            this.sidebar.Controls.Add(this.pnlReservation);
+            this.sidebar.Controls.Add(this.pnlCustomer);
+            this.sidebar.Controls.Add(this.pnlAbout);
+            this.sidebar.Controls.Add(this.pnlExit);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Font = new System.Drawing.Font("Impact", 10.25F);
             this.sidebar.Location = new System.Drawing.Point(0, 0);
@@ -75,26 +79,26 @@
             this.sidebar.Size = new System.Drawing.Size(200, 638);
             this.sidebar.TabIndex = 1;
             // 
-            // panel1
+            // pnlMenu
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnMenu);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(197, 70);
-            this.panel1.TabIndex = 1;
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlMenu.Controls.Add(this.lblMenu);
+            this.pnlMenu.Controls.Add(this.btnMenu);
+            this.pnlMenu.Location = new System.Drawing.Point(3, 3);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(197, 70);
+            this.pnlMenu.TabIndex = 1;
             // 
-            // label1
+            // lblMenu
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label1.Location = new System.Drawing.Point(73, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "MENU";
+            this.lblMenu.AutoSize = true;
+            this.lblMenu.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMenu.ForeColor = System.Drawing.Color.GhostWhite;
+            this.lblMenu.Location = new System.Drawing.Point(73, 26);
+            this.lblMenu.Name = "lblMenu";
+            this.lblMenu.Size = new System.Drawing.Size(42, 19);
+            this.lblMenu.TabIndex = 1;
+            this.lblMenu.Text = "MENU";
             // 
             // btnMenu
             // 
@@ -107,174 +111,183 @@
             this.btnMenu.TabStop = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // panel2
+            // pnlHome
             // 
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.btnHome);
-            this.panel2.Location = new System.Drawing.Point(3, 79);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 37);
-            this.panel2.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Impact", 10.25F);
-            this.button1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-27, -8);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(254, 52);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "                                Home";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.pnlHome.Controls.Add(this.btnHome);
+            this.pnlHome.Location = new System.Drawing.Point(3, 79);
+            this.pnlHome.Name = "pnlHome";
+            this.pnlHome.Size = new System.Drawing.Size(200, 37);
+            this.pnlHome.TabIndex = 3;
             // 
             // btnHome
             // 
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Impact", 10.25F);
             this.btnHome.ForeColor = System.Drawing.Color.GhostWhite;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(-4, -7);
+            this.btnHome.Location = new System.Drawing.Point(-25, -6);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnHome.Size = new System.Drawing.Size(254, 52);
-            this.btnHome.TabIndex = 2;
-            this.btnHome.Text = "                                Home";
+            this.btnHome.TabIndex = 3;
+            this.btnHome.Text = "                                HOME";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // panel3
+            // pnlReservation
             // 
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Location = new System.Drawing.Point(3, 122);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 37);
-            this.panel3.TabIndex = 4;
+            this.pnlReservation.Controls.Add(this.btnReservation);
+            this.pnlReservation.Location = new System.Drawing.Point(3, 122);
+            this.pnlReservation.Name = "pnlReservation";
+            this.pnlReservation.Size = new System.Drawing.Size(200, 37);
+            this.pnlReservation.TabIndex = 4;
             // 
-            // button2
+            // btnReservation
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.GhostWhite;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(-27, -8);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(254, 52);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "                                Reservation";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReservation.Font = new System.Drawing.Font("Impact", 10.25F);
+            this.btnReservation.ForeColor = System.Drawing.Color.GhostWhite;
+            this.btnReservation.Image = ((System.Drawing.Image)(resources.GetObject("btnReservation.Image")));
+            this.btnReservation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReservation.Location = new System.Drawing.Point(-25, -6);
+            this.btnReservation.Name = "btnReservation";
+            this.btnReservation.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnReservation.Size = new System.Drawing.Size(254, 52);
+            this.btnReservation.TabIndex = 3;
+            this.btnReservation.Text = "                                RESERVATION";
+            this.btnReservation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReservation.UseVisualStyleBackColor = true;
+            this.btnReservation.Click += new System.EventHandler(this.btnReservation_Click);
             // 
-            // button3
+            // pnlCustomer
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.GhostWhite;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(-4, -7);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(254, 52);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "                                Home";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            this.pnlCustomer.Controls.Add(this.btnCustomer);
+            this.pnlCustomer.Location = new System.Drawing.Point(3, 165);
+            this.pnlCustomer.Name = "pnlCustomer";
+            this.pnlCustomer.Size = new System.Drawing.Size(200, 37);
+            this.pnlCustomer.TabIndex = 5;
             // 
-            // panel4
+            // btnCustomer
             // 
-            this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.button5);
-            this.panel4.Location = new System.Drawing.Point(3, 165);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 37);
-            this.panel4.TabIndex = 5;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.Font = new System.Drawing.Font("Impact", 10.25F);
+            this.btnCustomer.ForeColor = System.Drawing.Color.GhostWhite;
+            this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
+            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomer.Location = new System.Drawing.Point(-25, -6);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnCustomer.Size = new System.Drawing.Size(254, 52);
+            this.btnCustomer.TabIndex = 3;
+            this.btnCustomer.Text = "                                CUSTOMER";
+            this.btnCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomer.UseVisualStyleBackColor = true;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
-            // button4
+            // pnlAbout
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.GhostWhite;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(-27, -8);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(254, 52);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "                                Customer";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
+            this.pnlAbout.Controls.Add(this.btnAbout);
+            this.pnlAbout.Location = new System.Drawing.Point(3, 208);
+            this.pnlAbout.Name = "pnlAbout";
+            this.pnlAbout.Size = new System.Drawing.Size(200, 37);
+            this.pnlAbout.TabIndex = 5;
             // 
-            // button5
+            // btnAbout
             // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.GhostWhite;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(-4, -7);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(254, 52);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "                                Home";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbout.Font = new System.Drawing.Font("Impact", 10.25F);
+            this.btnAbout.ForeColor = System.Drawing.Color.GhostWhite;
+            this.btnAbout.Image = ((System.Drawing.Image)(resources.GetObject("btnAbout.Image")));
+            this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAbout.Location = new System.Drawing.Point(-25, -6);
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnAbout.Size = new System.Drawing.Size(254, 52);
+            this.btnAbout.TabIndex = 3;
+            this.btnAbout.Text = "                                ABOUT";
+            this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAbout.UseVisualStyleBackColor = true;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
-            // panel5
+            // pnlExit
             // 
-            this.panel5.Controls.Add(this.button6);
-            this.panel5.Controls.Add(this.button7);
-            this.panel5.Location = new System.Drawing.Point(3, 208);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(200, 37);
-            this.panel5.TabIndex = 6;
+            this.pnlExit.Controls.Add(this.btnExit);
+            this.pnlExit.Location = new System.Drawing.Point(3, 251);
+            this.pnlExit.Name = "pnlExit";
+            this.pnlExit.Size = new System.Drawing.Size(200, 37);
+            this.pnlExit.TabIndex = 5;
             // 
-            // button6
+            // btnExit
             // 
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.GhostWhite;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(-27, -8);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(254, 52);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "                                About";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.GhostWhite;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(-4, -7);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(254, 52);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "                                Home";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Impact", 10.25F);
+            this.btnExit.ForeColor = System.Drawing.Color.GhostWhite;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(-25, -6);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnExit.Size = new System.Drawing.Size(254, 52);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "                                EXIT";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // tmrSidebar
             // 
             this.tmrSidebar.Interval = 10;
             this.tmrSidebar.Tick += new System.EventHandler(this.tmrSlider_Tick);
             // 
-            // pictureBox1
+            // aboutPage
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(809, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.aboutPage.Controls.Add(this.label4);
+            this.aboutPage.Controls.Add(this.label3);
+            this.aboutPage.Controls.Add(this.label2);
+            this.aboutPage.Controls.Add(this.label1);
+            this.aboutPage.Location = new System.Drawing.Point(218, 73);
+            this.aboutPage.Name = "aboutPage";
+            this.aboutPage.Size = new System.Drawing.Size(619, 511);
+            this.aboutPage.TabIndex = 4;
+            this.aboutPage.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(83, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "ASDASDSADADADSAD";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(83, 107);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(125, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "ASDASDSADADADSAD";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(83, 150);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(125, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "ASDASDSADADADSAD";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(83, 202);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "ASDASDSADADADSAD";
             // 
             // main
             // 
@@ -282,7 +295,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(836, 626);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.aboutPage);
             this.Controls.Add(this.sidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "main";
@@ -290,14 +303,16 @@
             this.Text = "main";
             this.Load += new System.EventHandler(this.main_Load);
             this.sidebar.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlMenu.ResumeLayout(false);
+            this.pnlMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlHome.ResumeLayout(false);
+            this.pnlReservation.ResumeLayout(false);
+            this.pnlCustomer.ResumeLayout(false);
+            this.pnlAbout.ResumeLayout(false);
+            this.pnlExit.ResumeLayout(false);
+            this.aboutPage.ResumeLayout(false);
+            this.aboutPage.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -305,22 +320,24 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel sidebar;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnlMenu;
+        private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.PictureBox btnMenu;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel pnlHome;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Timer tmrSidebar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel pnlReservation;
+        private System.Windows.Forms.Button btnReservation;
+        private System.Windows.Forms.Panel pnlCustomer;
+        private System.Windows.Forms.Button btnCustomer;
+        private System.Windows.Forms.Panel pnlAbout;
+        private System.Windows.Forms.Button btnAbout;
+        private System.Windows.Forms.Panel pnlExit;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Panel aboutPage;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

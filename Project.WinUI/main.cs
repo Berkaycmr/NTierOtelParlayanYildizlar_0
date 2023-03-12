@@ -45,14 +45,34 @@ namespace Project.WinUI
             tmrSidebar.Start();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void main_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            aboutPage.Visible = false;
+        }
+
+        private void btnReservation_Click(object sender, EventArgs e)
+        {
+            aboutPage.Visible = false;
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            aboutPage.Visible = false;
+        }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            aboutPage.Visible = true;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
